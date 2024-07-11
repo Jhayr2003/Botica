@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+    <servlet>
+        <servlet-name>SvProductosss</servlet-name>
+        <servlet-class>servlets.SvProductosss</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SvProductos</servlet-name>
+        <servlet-class>servlets.SvProductos</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SvEliminarProductos</servlet-name>
+        <servlet-class>servlets.SvEliminarProductos</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EditarProductos</servlet-name>
+        <servlet-class>servlets.EditarProductos</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SvProductosss</servlet-name>
+        <url-pattern>/SvProductosss</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SvProductos</servlet-name>
+        <url-pattern>/SvProductos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SvEliminarProductos</servlet-name>
+        <url-pattern>/SvEliminarProductos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditarProductos</servlet-name>
+        <url-pattern>/EditarProductos</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <servlet>
+        <servlet-name>SvHome</servlet-name>
+        <servlet-class>servlets.SvHome</servlet-class>
+    </servlet>
+    <welcome-file-list>
+        <welcome-file>pages/productos/RegistroProductos.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>

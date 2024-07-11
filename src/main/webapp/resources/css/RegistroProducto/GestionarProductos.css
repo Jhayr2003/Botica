@@ -1,0 +1,191 @@
+
+.parent-container{
+    display: grid;
+    grid-auto-columns: auto;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+/* CONTENIDO DE LA DERECHA */
+.box-Content{
+   display: grid;
+    box-sizing: border-box;
+    max-height: 100vh;
+    grid-template-columns: subgrid;
+    grid-template-rows: minmax(10px,0.18fr) 0.8fr 0.5fr;
+}
+
+/* TITULO Y BARRA DE BUSQUEDA*/
+.Frm-Header{
+    background: #009099;
+    display: flex;
+    flex-direction: column;
+}
+
+.Frm-Title{
+    color: #fff;
+    padding: 0.5rem 0 0.2rem 0.6rem;
+    margin-left: 1.5rem;
+    font-size: 1.7rem;
+}
+
+
+.search-box{
+    margin-bottom: 1rem;
+    padding: 0;
+    background: white;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    margin-left: 2rem;
+    max-width: 30%;
+    padding-left: 0.2rem;
+    padding-bottom:0.5rem;
+    transition: outline 0.2s;
+    
+}
+.search-bar{
+    flex:1;
+    border: 0;
+    padding: 0;
+    margin-left: 0.7rem;
+    margin-top: 0.4rem;
+    font-size: 1.2rem;
+    background: transparent;
+}
+
+.search-box:has(.search-bar:focus-visible){
+    outline: 4px solid black;
+}
+
+.search-bar:focus-visible{
+    outline: 0;
+}
+
+.search-btn{
+    padding: 0;
+    margin-top: 0.3rem;
+    margin-right: 0.3rem;
+    flex-shrink: 2;
+    flex-basis: 10px;
+    border-radius: 25px;
+    background: transparent;
+    border: 0;
+    transition: border 0.5s,padding 0.5s, background 0.5s;
+
+}
+
+.search-btn:hover{
+    background: #FED600;
+    border-radius: 25px;
+    
+}
+
+/* TABLA DE CONTENIDOS */
+.Frm-Table{   
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    max-height: 100%;
+    max-width: 80%;
+    overflow: auto;
+    margin-left: 6rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+        
+}
+
+.table{
+    font-size: 1.2rem;
+    width: 100%;
+    border-spacing: 0;
+    
+}
+
+td,th{
+   text-align: center;
+   padding: 0.5rem;
+}
+
+tr:nth-child(2n){
+    background: rgb(191, 191, 191);
+}
+.table-header{
+    position: sticky;
+    top:0;
+    color: #fff;
+    height: 2rem;
+    background: rgb(57, 130, 221 );
+    text-align: center;
+}
+.table-header tr{
+        padding: 3rem;
+}
+
+/* BOTONES*/
+
+.Frm-Btns{
+    margin:auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.Frm-Btns-Report{
+   display: flex;
+   justify-content: right;
+   align-items: center;
+   max-width: 90%;
+}
+
+
+.box-Content_Btn{
+    padding: 0.9rem 4rem;
+    font-size: 1.4rem;
+    margin: 1rem;
+    border-radius: 15px;
+    border: 0;
+    background: rgb(178, 245, 101);
+    transition: all .5s ease;
+}
+
+.btn_delete{
+    transition: all .5s ease;
+    background: rgb(245, 124, 101);
+    color: #fff;
+}
+
+.Btn_PDF{
+    padding: 0.7rem 0.5rem;
+    font-size: 1.1rem;
+    color: #fff;
+    margin: 0.9rem;
+    border-radius: 15px;
+    border: 0;
+    background: rgb(57, 130, 221);
+    transition: all .5s ease;
+}
+
+.Btn_PDF:hover{
+    background: rgb(191, 219, 247);
+    transform: scale(.9);
+    color: #000;
+}
+
+
+.box-Content_Btn:hover{
+    background: rgb(221, 250, 189);
+    transform: scale(.9);
+}
+
+.btn_delete:hover{
+    background: rgb(246, 206, 198 );
+    transform: scale(.9);
+    color: #000;
+}
+
+:is(.box-Content_Btn,.btn_delete,.Btn_PDF):active{
+    transform: scale(1.1);    
+}
+
+/*Ajustar altura de la tabla */

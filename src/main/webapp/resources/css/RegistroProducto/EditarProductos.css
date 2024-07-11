@@ -1,0 +1,25 @@
+
+/* Personalización de los campos de entrada */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: left; /* Alinea el texto dentro del campo a la izquierda */
+       resize: none; /* Deshabilita la redimensión */
+    outline: none; /* Quita el contorno predeterminado */
+    
+}
+
+/* Estilos adicionales para el contenedor del formulario */
+form {
+    margin-top: 20px;
+}
+
+.d-grid {
+    margin-top: 20px;
+}
